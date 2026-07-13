@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+htmlcov/
+.coverage
+
+# CAD outputs (generated, not source)
+cad/output/
+*.step
+*.stp
+*.stl
+*.brep
+!assets/**/*.stl
+!assets/**/*.step
+
+# Simulation / experiment outputs
+# Note: experiments/runs/ *is* tracked (RECORD.md + data are the point of
+# the engineering-notebook approach, see docs/philosophy.md) - only
+# scratch/transient artifacts are ignored here.
+*.h5
+*.log
+
+# Unreal Engine
+unreal/**/Binaries/
+unreal/**/DerivedDataCache/
+unreal/**/Intermediate/
+unreal/**/Saved/
+*.sln
+
+# Firmware build artifacts
+firmware/**/build/
+firmware/**/*.elf
+firmware/**/*.hex
+firmware/**/*.bin
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json

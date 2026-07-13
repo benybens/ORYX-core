@@ -1,0 +1,24 @@
+# Conda environment for ORYX.
+#
+# CadQuery ships prebuilt OCP/OpenCascade binaries that are far more reliable
+# via conda-forge than via pip, so the CAD toolchain is defined here rather
+# than in pyproject.toml. Everything else can equally be installed with pip
+# (see pyproject.toml / `pip install -e ".[dev]"`).
+#
+# Usage:
+#   conda env create -f environment.yml
+#   conda activate oryx
+#   pip install -e ".[dev]"
+name: oryx
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - cadquery=2.5
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - pyyaml
+  - pytest
+  - pip
